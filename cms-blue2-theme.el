@@ -69,7 +69,10 @@
    `(match ((,class (:background "RoyalBlue3"))))
    `(next-error ((,class (:inherit (region)))))
    `(query-replace ((,class (:inherit (isearch)))))
-   `(custom-visibility ((,class (:inherit link :height 1.0))))))
+   `(custom-visibility ((,class (:inherit link :height 1.0))))
+   `(ace-jump-face-foreground ((,class (:background "#05468f" :foreground "#59fbff"))))
+   `(magit-diff-del ((,class (:foreground  "grey40"))))
+   `(diff-context ((,class (:foreground "#8692c0"))))))
 
 (when load-file-name
   (add-to-list 'custom-theme-load-path
