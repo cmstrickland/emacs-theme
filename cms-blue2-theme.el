@@ -62,6 +62,7 @@
    `(mode-line-emphasis ((,class (:weight bold))))
    `(mode-line-highlight ((,class (:box (:line-width 2 :color "grey40" :style released-button :inherit (highlight))))))
    `(mode-line-inactive ((,class (:inherit mode-line :background "#51585e"    :foreground "grey50"
+
                                            :box     (:line-width -1 :color "gray20")   :weight light))))
    `(isearch ((,class (:foreground "brown4" :background "palevioletred2"))))
    `(isearch-fail ((,class (:background "red4"))))
