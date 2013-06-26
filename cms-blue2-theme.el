@@ -9,10 +9,15 @@
 
 ;;; Code:
 
+;; these guys define the diff faces when they're initialised
+;; in some way I haven't quite understood
+(require 'diff-mode)
+(require 'magit)
+
 (deftheme cms-blue2
   "pastels on a slate blue")
 
-(let ((class '((class color) (min-colors 89))))
+(let ((class '((class color) (min-colors 88))))
   (custom-theme-set-faces
    'cms-blue2
    `(default ((,class (:background "#05468f" :foreground "#e7cf84"
@@ -27,11 +32,13 @@
    `(ido-first-match ((,class (:inverse-video t :weight bold))))
    `(ido-only-match ((,class (:foreground "white" :inverse-video t))))
    `(ido-subdir ((,class (:foreground "#e88e1b"))))
-   `(magit-diff-add ((,class (:foreground "#bbcaff"))))
-   `(magit-diff-del ((,class (:foreground "#b2707a"))))
+   `(diff-added ((,class (:foreground "#bbcaff"))))
+   `(magit-diff-add  ((,class (:foreground "#bbcaff"))))
+   `(diff-removed ((,class (:foreground  "grey40"))))
+   `(magit-diff-del ((,class (:foreground  "grey40"))))
    `(magit-item-highlight ((,class (:background "#032c66"))))
-   `(magit-diff-hunk-header ((,class (:background "#022057"))))
-   `(magit-diff-file-header ((,class (:inherit (magit-diff-hunk-header)))))
+   `(diff-hunk-header ((,class (:background "#022057") )))
+   `(diff-file-header ((,class (:inherit (diff-hunk-header)))))
    `(region ((,class (:background "blue3"))))
    `(shadow ((,class (:foreground "gray50"))))
    `(secondary-selection ((,class (:background "#13145a"))))
@@ -72,7 +79,6 @@
    `(query-replace ((,class (:inherit (isearch)))))
    `(custom-visibility ((,class (:inherit link :height 1.0))))
    `(ace-jump-face-foreground ((,class (:background "#05468f" :foreground "#59fbff"))))
-   `(magit-diff-del ((,class (:foreground  "grey40"))))
    `(diff-context ((,class (:foreground "#8692c0"))))))
 
 (when load-file-name
