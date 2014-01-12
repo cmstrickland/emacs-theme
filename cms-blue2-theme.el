@@ -34,6 +34,7 @@
    `(ido-subdir ((,class (:foreground "#e88e1b"))))
    `(diff-added ((,class (:foreground "#bbcaff"))))
    `(magit-diff-add  ((,class (:foreground "#bbcaff"))))
+   `(diff-file-header  ((,class (:background "#1500b0"))))
    `(diff-removed ((,class (:foreground  "grey40"))))
    `(magit-diff-del ((,class (:foreground  "grey40"))))
    `(magit-item-highlight ((,class (:background "#032c66"))))
